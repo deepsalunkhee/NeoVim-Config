@@ -7,7 +7,6 @@ return {
   event = { "BufReadPre", "BufNewFile" },
   config = function()
     local conform = require("conform")
-    
     conform.setup({
       formatters_by_ft = {
         -- Web Development
@@ -19,26 +18,25 @@ return {
         css = { "prettier" },
         json = { "prettier" },
         markdown = { "prettier" },
-        
+
         -- Systems Programming
         c = { "clang-format" },
         cpp = { "clang-format" },
-        
+
         -- Java
         java = { "google-java-format" },
-        
+
         -- Lua
         lua = { "stylua" },
-        
+
       },
-      
       -- Format on save
       format_on_save = {
         lsp_fallback = true,
         timeout_ms = 500,
       },
     })
-    
+
     ---------------------------------------------------
     -- FORMATTER KEYBINDINGS
     ---------------------------------------------------
